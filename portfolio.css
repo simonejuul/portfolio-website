@@ -17,12 +17,7 @@ body {
 }
 
 
-/*KONTROLLERER MAX BREDDE PÅ DINE SECTIONS*/
 
-margin: 0 auto;
-text-align: center;
-
-}
 
 a {
     text-decoration: none;
@@ -39,8 +34,8 @@ a:hover {
 
 #splash {
     height: 62.5vw;
-    width: 95vw;
-    background-image: url(img/splash-tablet-landscape.png);
+    width: 100vw;
+    background-image: url(img/nytsplash.png);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
@@ -50,21 +45,24 @@ a:hover {
 @media screen and (min-width:392px) and (max-width:627px) and (orientation:landscape) {
     #splash {
         height: 59vw;
-        background-image: url('img/splash-mobil-landscape.png');
+        background-image: url('img/nytsplashmobil.png');
+        margin-top: 5vw;
     }
 }
 
 @media screen and (min-width: 640px) and (max-width: 1024px) and (orientation:landscape) {
     #splash {
         height: 75vw;
-        background-image: url('img/splash-tablet-landscape.png');
+        background-image: url('img/nysplashtablet.png');
+        margin-top: 5vw;
     }
 }
 
 @media screen and (min-width: 1025px) and (orientation:landscape) {
     #splash {
         height: 62.5vw;
-        background-image: url('img/splash-desktop.png');
+        background-image: url('img/nysplashdesktop.png');
+        margin-top: 5vw;
     }
 }
 
@@ -162,7 +160,7 @@ p {
 .dropbtn {
     background-color: rgba(0, 0, 0, 0);
     color: white;
-    padding: .5% 5%;
+    padding: 1.5% 5%;
     font-size: 1.5em;
     border: none;
     cursor: pointer;
