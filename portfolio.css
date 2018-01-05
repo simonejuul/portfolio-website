@@ -1,0 +1,422 @@
+/*--------------GENERAL SETTINGS START---------------*/
+
+body {
+    background-image: url(img/grey-paper.jpg);
+    background-repeat: repeat;
+    background-size: contain;
+    margin: 0;
+    padding: 0;
+}
+
+#dok_style {
+    padding: 0 0%;
+}
+
+    {
+    box-sizing: border-box;
+}
+
+
+/*KONTROLLERER MAX BREDDE PÅ DINE SECTIONS*/
+
+margin: 0 auto;
+text-align: center;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: black;
+}
+
+/*--------------GENERAL SETTINGS END---------------*/
+
+/*----------------SPLASH-------------------------*/
+
+#splash {
+    height: 62.5vw;
+    width: 95vw;
+    background-image: url(img/splash-tablet-landscape.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width:392px) and (max-width:627px) and (orientation:landscape) {
+    #splash {
+        height: 59vw;
+        background-image: url('img/splash-mobil-landscape.png');
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1024px) and (orientation:landscape) {
+    #splash {
+        height: 75vw;
+        background-image: url('img/splash-tablet-landscape.png');
+    }
+}
+
+@media screen and (min-width: 1025px) and (orientation:landscape) {
+    #splash {
+        height: 62.5vw;
+        background-image: url('img/splash-desktop.png');
+    }
+}
+
+/*-----------------MENU--------------------*/
+
+.pres_header {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.71);
+    width: 100vw;
+    padding: 0;
+    z-index: 100;
+}
+
+.pres_header nav {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0 2vw 0 0;
+}
+
+.pres_header nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding-left: 50px;
+    display: block;
+}
+
+.pres_header nav a:hover {
+    color: #e4d61e;
+    /*en anden farve når musen går henover*/
+}
+
+@media screen and (min-width: 668px) {
+    /*Så bliver menuen på række inden når formaten bliver større end ipad*/
+    .pres_header nav a {
+        display: inline-block;
+    }
+}
+
+/*---------------------FONTE-----------------------*/
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 5em;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 2.5em;
+    margin: 50px 0 0 0;
+    padding: 5px;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+#dok_style h2 {
+    color: black;
+    font-size: 2.5em;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 1.4em;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+strong {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: center;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/*!!!!!!!!!!!!!!!!!DOKUMENTATIONSSITE!!!!!!!!!!!!!!!!!!!*/
+
+/*--------------DROPDOWN MENU---------------*/
+
+.dropbtn {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: .5% 5%;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+.dropdown {
+    position: fixed;
+    top: 0;
+    display: inline-block;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.71);
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #242424;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .5em;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(13, 13, 13, 0.88);
+    color: #e4d61e;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgba(0, 0, 0, 0);
+    color: #e4d61e;
+}
+
+/*-------------IKON--------------*/
+
+#ikon_container {
+    position: absolute;
+    top: 0.5vw;
+    left: 94vw;
+}
+
+#ikon_sprite {
+    background-image: url(img/Asset%201.svg);
+    background-size: 400% 100%;
+    width: 4vw;
+    height: 4vw;
+    z-index: 1;
+}
+
+.ikon_skifter {
+    animation-name: ikon_skifter_kf;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(4);
+}
+
+@keyframes ikon_skifter_kf {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -400% 0;
+    }
+}
+
+/*--------------DROPDOWN MENU SLUT---------------*/
+
+#overskrift,
+#CV,
+#brugerinterview,
+#webdesign,
+#video,
+#animation,
+#ux,
+#sectionwrapper_links {
+    max-width: 1800px;
+    /*KONTROLLERER MAX BREDDE PÅ DINE SECTIONS*/
+    margin: 0 auto;
+    text-align: center;
+}
+
+#overskrift {
+    margin: 5%;
+    text-align: center;
+}
+
+#overskrift img {
+    margin: 0;
+    width: 25%;
+}
+
+#overskrift h1 {
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+#overskrift h2 {
+    color: black;
+    padding: 1% 0;
+    margin: 0;
+}
+
+#dok_style {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#dok_style a {
+    color: black;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+#dok_style a:hover {
+    color: #e4d61e;
+}
+
+#dok_style p {
+    font-size: 1.1em;
+}
+
+#dok_style h2 {
+    font-size: 2.5em;
+}
+
+/*--------------CV---------------*/
+
+#CV {
+    background-color: rgba(255, 255, 255, 0.74);
+}
+
+#CV .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#CV .column {
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+#CV p {
+    margin: 2% 3%;
+}
+
+#CV .mig {
+    text-align: center;
+}
+
+/*--------------CV SLUT---------------*/
+
+/*--------------WEBDESIGN START---------------*/
+
+#webdesign {
+    background-color: rgba(255, 255, 255, 0.74);
+}
+
+#webdesign .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#webdesign .column {
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+#webdesign p {
+    margin: 1% 4%;
+}
+
+/*--------------WEBDESIGN SLUT---------------*/
+
+/*--------------ANIMATION START---------------*/
+
+#sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#animation {
+    background-color: rgba(255, 255, 255, 0.74);
+    flex-basis: 300px;
+}
+
+#animation p {
+    margin: 2% 3%;
+}
+
+/*--------------ANIMATION SLUT---------------*/
+
+/*--------------VIDEO START---------------*/
+
+#video {
+    background-color: rgba(255, 255, 255, 0.74);
+}
+
+#video p {
+    margin: 2% 4%
+}
+
+#video .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#video .column {
+    flex-grow: 1;
+    flex-basis: 400px;
+}
+
+/*--------------VIDEO SLUT---------------*/
+
+/*--------------UX START---------------*/
+
+#ux {
+    background-color: rgba(255, 255, 255, 0.74);
+}
+
+#ux .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#ux .column {
+    flex-grow: 1;
+    flex-basis: 300px;
+    padding: 2vw;
+}
+
+#ux p {
+    padding: 2% 5% 4%;
+}
+
+/*--------------UX SLUT---------------*/
+
+#dok_style .content_container {
+    padding: 0% 5%;
+}
